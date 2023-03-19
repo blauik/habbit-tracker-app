@@ -1,0 +1,22 @@
+<h1>Habbit tracker</h1>
+<p>Enter a number and a date:</p>
+<input type="number" [(ngModel)]="number">
+<input type="date" [(ngModel)]="date">
+<button (click)="generateTable()">Submit</button>
+
+<table *ngIf="rows.length > 0">
+    <thead>
+        <tr>
+            <th>Check</th>
+            <th>Date</th>
+            <th>Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rows; let i = index" [ngClass]="{'checked': row.checked}">
+            <td><input type="checkbox" [(ngModel)]="row.checked"></td>
+            <td>{{ row.dateString }}</td>
+            <td>{{ row.value.toFixed(2) }}</td>
+        </tr>
+    </tbody>
+</table>
