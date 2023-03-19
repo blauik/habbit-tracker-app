@@ -36,7 +36,7 @@ staticserver0:
     cache: [ node_modules ]
 
   # ==== how to run your application ====
-  # (usually no changes needed for a static server)
+  # (usually no changes needed for a statsic server)
   #run:
     # *optional* install dependencies that your
     # runtime service requires (will be cached)
